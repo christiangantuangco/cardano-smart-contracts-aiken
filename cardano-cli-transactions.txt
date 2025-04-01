@@ -1,0 +1,20 @@
+cardano-cli latest address key-gen \
+--verification-key-file payment.vkey \
+--signing-key-file payment.skey
+
+cardano-cli latest stake-address key-gen \
+--verification-key-file stake.vkey \
+--signing-key-file stake.skey
+
+cardano-cli latest address build \
+--payment-verification-key-file addresses/keys/fee/payment.vkey \
+--stake-verification-key-file addresses/keys/fee/stake.vkey \
+--testnet-magic 2 \
+--out-file addresses/fee.addr
+
+# Build a payment and delegation address contract
+cardano-cli latest address build \
+--payment-script-file contract.json \
+--stake-script-file contract.json \
+--testnet-magic 2 \
+--out-file addresses/contract.addr
