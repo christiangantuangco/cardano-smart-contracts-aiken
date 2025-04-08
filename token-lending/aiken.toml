@@ -1,0 +1,18 @@
+name = "this/token-lending"
+version = "0.0.0"
+compiler = "v1.1.11"
+plutus = "v3"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'this/token-lending'"
+
+[repository]
+user = "this"
+project = "token-lending"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "v2.2.0"
+source = "github"
+
+[config]
